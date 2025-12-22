@@ -4,23 +4,25 @@ from tkmacosx import Button
 
 # Create the main window
 root = Tk()
-root.title("Enter Title Here")
+root.title("")
 
 #Set size of window
-root.geometry("500x200")
+root.geometry("1000x400")
 
-msgbox = Text(root, height = 5, width = 30)
+msgbox = Text(root)
 
 # Create buttons
-red_button = Button(root,text='Save')
-
-#Add a label
-label = Label(root, text=" What color is the light")
+save_button = Button(root,text='Save',background="lightgreen")
+openfile_button = Button(root,text='Open File')
+newfile_button = Button(root,text='New File')
 
 
 # Place widgets in window (with pack function!)
-red_button.grid(row=0,column=0)
-msgbox.grid(row=1,column=0)
+save_button.place(x=0, y=0, anchor = NW)
+openfile_button.place(x=95,y=0, anchor = NW)
+newfile_button.place(x=195,y=0,anchor= NW)
+msgbox.place(x=0,y=30, anchor=NW)
+
 
 # Start the GUI event loop
 root.mainloop()
