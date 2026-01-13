@@ -26,8 +26,9 @@ def update3():
 
 
 def random1():
-	num = random.randint(1, 6)
-	print(num)
+	choices = [button1, button2, button3, label1, label2, label3]
+	num = random.randint(0, 5)
+	choices[num].config(text='RANDOMLY PICKED!')
 
 
 
