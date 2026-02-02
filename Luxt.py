@@ -9,17 +9,18 @@ root.title("")
 #Set size of window
 root.geometry("1000x400")
 
-def newfile():
+msgbox = Text(root)
+
+def savefile():
 	with open('demo.txt', 'w') as f:
 		f.write('Updated text')
-	print(msgbox.get('1.0',END))
+	
 
-msgbox = Text(root)
 
 # Create buttons
 save_button = Button(root,text='Save',background="lightgreen")
 openfile_button = Button(root,text='Open File')
-newfile_button = Button(root,text='New File', command=newfile)
+newfile_button = Button(root,text='New File', command=savefile)
 
 
 # Place widgets in window (with pack function!)
